@@ -5,7 +5,7 @@ alias addall='git add .'
 alias branch='git branch'
 alias checkout='git checkout'
 alias clone='git clone'
-alias commit='git commit -m ${"$@"}'
+alias commit=commitfn
 alias fetch='git fetch --all -Pp'
 alias pull='git pull origin $1 --rebase'
 alias npull='git pull origin'
@@ -13,6 +13,10 @@ alias push='git push origin'
 alias stat='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
+
+commitfn() {
+  git commit -m '$@'
+}
 
 #
 # ------------ Ls to exa
