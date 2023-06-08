@@ -6,7 +6,7 @@ alias branch='git branch'
 alias checkout='git checkout'
 alias clone='git clone'
 alias commit=__gitcommit
-alias commitfixup=__gitcommitamend
+alias commitfix=__gitcommitamend
 alias fetch='git fetch --all -Pp'
 alias pull='git pull origin $1 --rebase'
 alias npull='git pull origin'
@@ -16,15 +16,15 @@ alias tag='git tag'
 alias newtag='git tag -a'
 
 __gitcommit() {
-  echo "$@"
-  echo "$*"
+  # echo "$@"
+  # echo "$*"
   git commit -m "$*"
 }
 
 __gitcommitamend() {
   # echo "$@"
   # echo "$*"
-  git commit -m "$*"
+  git commit --amend -m "$*"
 }
 
 
