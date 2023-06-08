@@ -5,7 +5,8 @@ alias addall='git add .'
 alias branch='git branch'
 alias checkout='git checkout'
 alias clone='git clone'
-alias commit=commitfn
+alias commit=__gitcommit
+alias commitfixup=__gitcommitamend
 alias fetch='git fetch --all -Pp'
 alias pull='git pull origin $1 --rebase'
 alias npull='git pull origin'
@@ -14,9 +15,18 @@ alias stat='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
 
-commitfn() {
-  git commit -m '$@'
+__gitcommit() {
+  echo "$@"
+  echo "$*"
+  git commit -m "$*"
 }
+
+__gitcommitamend() {
+  # echo "$@"
+  # echo "$*"
+  git commit -m "$*"
+}
+
 
 #
 # ------------ Ls to exa
