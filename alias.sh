@@ -1,6 +1,10 @@
 # 
 # ------------ Git
-alias addup='git add -u'
+alias c="clear; $1"
+alias run="pnpm dev $1"
+alias ga="git add ."
+alias globe="git add .; lobe"
+alias glib="git reset HEAD --; git add pnpm-lock.yaml && git commit -m 'Pnpm-lock.yaml changes'"alias addup='git add -u'
 alias addall='git add .'
 alias branch='git branch'
 alias checkout='git checkout'
