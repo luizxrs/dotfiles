@@ -4,13 +4,16 @@ alias c="clear; $1"
 alias run="pnpm dev $1"
 alias ga="git add ."
 alias globe="git add .; lobe"
-alias glib="git reset HEAD --; git add pnpm-lock.yaml && git commit -m 'Pnpm-lock.yaml changes'"alias addup='git add -u'
+alias glib="git reset HEAD --; git add pnpm-lock.yaml && git commit -m 'Pnpm-lock.yaml changes'"
+alias addup='git add -u'
 alias addall='git add .'
 alias branch='git branch'
 alias checkout='git checkout'
+alias develop='git checkout develop'
 alias clone='git clone'
 alias commit=__gitcommit
 alias commitfix=__gitcommitamend
+alias nah=nah
 alias fetch='git fetch --all -Ppv'
 alias pull='git pull origin $1 --rebase'
 alias pullall='git pull -r --all'
