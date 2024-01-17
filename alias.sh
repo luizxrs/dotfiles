@@ -22,6 +22,7 @@ alias push='git push origin'
 alias stat='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
+alias back='git checkout -'
 
 __gitcommit() {
   # echo "$@"
