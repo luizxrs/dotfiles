@@ -13,7 +13,7 @@ alias develop='git checkout develop'
 alias clone='git clone'
 alias commit=__gitcommit
 alias commitfix=__gitcommitamend
-alias nah=nah
+alias nah=__nah
 alias fetch='git fetch --all -Ppv'
 alias pull='git pull origin $1 --rebase'
 alias pullall='git pull -r --all'
@@ -23,6 +23,9 @@ alias stat='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
 alias back='git checkout -'
+alias setalias='cd ~/.dotfiles;  nano alias.sh'
+alias pushalias=__pushalias
+alias srczsh='source ~/.zshrc'
 
 __gitcommit() {
   # echo "$@"
@@ -36,7 +39,14 @@ __gitcommitamend() {
   git commit --amend -m "$*"
 }
 
-nah() {
+__pushalias() {
+  git add .
+  git commit -am "$*"
+  git push
+  cd
+}
+
+__nah() {
     git reset --hard
     git clean -df
     if [ -d ".git/rebase-apply" ] || [ -d ".git/rebase-merge" ]; then
