@@ -3,7 +3,7 @@
 alias c="clear; $1"
 alias run="pnpm dev $1"
 alias ga="git add ."
-alias globe="git add .; lobe"
+alias globe="git add .; lobe -a"
 alias glib="git reset HEAD --; git add pnpm-lock.yaml && git commit -m 'Pnpm-lock.yaml changes'"
 alias addup='git add -u'
 alias addall='git add .'
