@@ -1,15 +1,16 @@
+alias teste1='echo teste'
 # 
 # ------------ Git
 alias c="clear; $1"
 alias run="pnpm dev $1"
 alias ga="git add ."
-alias globe="git add .; lobe -a"
+alias globe="git add .; lobe"
 alias glib="git reset HEAD --; git add pnpm-lock.yaml && git commit -m 'Pnpm-lock.yaml changes'"
 alias addup='git add -u'
 alias addall='git add .'
 alias branch='git branch'
 alias checkout='git checkout'
-alias develop='git checkout develop'
+alias deve='git checkout develop'
 alias clone='git clone'
 alias commit=__gitcommit
 alias commitfix=__gitcommitamend
@@ -23,7 +24,7 @@ alias stat='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
 alias back='git checkout -'
-alias setalias='cd ~/.dotfiles;  nano alias.sh'
+alias setalias='cd ~/.dotfiles;  nano alias.sh && source alias.sh'
 alias pushalias=__pushalias
 alias srczsh='source ~/.zshrc'
 
