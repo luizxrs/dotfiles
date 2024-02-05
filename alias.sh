@@ -13,6 +13,7 @@ alias checkout='git checkout'
 alias deve='git checkout develop'
 alias clone='git clone'
 alias commit=__gitcommit
+alias ca="git add . && commit"
 alias commitfix=__gitcommitamend
 alias nah=__nah
 alias fetch='git fetch --all -Ppv'
