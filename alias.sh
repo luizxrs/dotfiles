@@ -2,7 +2,9 @@ alias teste1='echo teste'
 # 
 # ------------ Git
 alias c="clear; $1"
-alias run="pnpm dev $1"
+alias run="bun run dev $1"
+alias nrun="bun run next $1"
+alias oldrun="pnpm dev $1"
 alias ga="git add ."
 alias globe="git add .; lobe"
 alias glib="git reset HEAD --; git add pnpm-lock.yaml && git commit -m 'Pnpm-lock.yaml changes'"
