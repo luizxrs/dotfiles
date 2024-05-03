@@ -30,6 +30,7 @@ alias back='git checkout -'
 alias setalias='cd ~/.dotfiles;  nano alias.sh && source alias.sh'
 alias pushalias=__pushalias
 alias srczsh='source ~/.zshrc'
+alias z = 'zoxide'
 
 __gitcommit() {
   # echo "$@"
@@ -59,14 +60,6 @@ __nah() {
 }
 
 
-
-#
-# ------------ Ls to exa
-alias ls='exa --color=always --group-directories-first'
-alias la='exa -a --color=always --group-directories-first'
-alias ll='exa -l --color=always --group-directories-first'
-alias lt='exa -aT --color=always --group-directories-first'
-alias l.='exa -a | egrep "^\."'
 
 #
 # ------------ Colorize Grep
